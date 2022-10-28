@@ -15,7 +15,7 @@ const {cpus}=require('os')
 
 //require('dotenv').config({ path: './b7.configuraciones/config.env' })
 require('dotenv').config()
-console.log(process.env)
+//console.log(process.env)
 const hostname = process.env.HOSTNAME;
 //const port = process.env.PORT;
 //const { log } = require('./b7.configuraciones/logging.js')
