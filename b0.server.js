@@ -50,7 +50,7 @@ const UsersModel=require('./b3.models/user.model')
 //const process_PORT=8081;
 
 // const process_PORT=process.env.PORT || 8081;
-const process_PORT=parseInt(process.argv[2]) || 8081
+const process_PORT=process.env.PORT || parseInt(process.argv[2]) || 8081
 const procAdminEmail=process.env.ADMIN_EMAIL
 const modoCluster=process.argv[3]=='CLUSTER'
 
