@@ -1,7 +1,7 @@
 const {createTransport}=require('nodemailer')
 const twilio=require('twilio')
-const accountSid = 'AC7ae2b039567bbf83b09c3f275bbe8388'; 
-const authToken = '9178689a24a80dd57a015507c1734e8b'; 
+const accountSid = process.env.TWILIO_ACCOUNTSSID; 
+const authToken = process.env.TWILIO_AUTHTOKEN; 
 const client = twilio(accountSid, authToken); 
 const procAdminPhone=process.env.ADMIN_PHONE
 
@@ -58,7 +58,7 @@ function nodemailer(tipo,destino,detalles){
         port: 587,
         auth: {
             user: email,
-            pass: 'TJCYmeCJeX6ygsvY5y'
+            pass: process.env.NODEMAILER_PASS
         }
     });
     if (tipo=='compraNew'){
